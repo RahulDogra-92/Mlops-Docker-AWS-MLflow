@@ -1,0 +1,13 @@
+prefix=/Users/rahul/Downloads/scaler_project/scaler
+exec_prefix=/Users/rahul/Downloads/scaler_project/scaler
+libdir=/Users/rahul/Downloads/scaler_project/scaler/lib
+sharedlibdir=/Users/rahul/Downloads/scaler_project/scaler/lib
+includedir=/Users/rahul/Downloads/scaler_project/scaler/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
