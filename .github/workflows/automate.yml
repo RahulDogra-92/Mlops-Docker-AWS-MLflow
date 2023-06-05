@@ -1,23 +1,23 @@
-name: Run Python Tests
-on:
-  push:
-    branches:
-      - main
+# define an event which can happen(like someone push/fork the repo)
+
+name: Run Python Test  # name of the workflow
+on:                    # this on is going to tell us when and where this workflow will get activated
+    push:
+      branches:
+          -main
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # specify type of machine to run the job
     steps:
-      - uses: actions/checkout@v2
-      - name: Install Python 3
+      - uses: action/checkout@v2  
+      - name: Install Python 3   # #specify that you need to setup this python
         uses: actions/setup-python@v1
-        with:
-          python-version: 3.9
-      - name: Install dependencies
+        with: 
+          python-version: 3.9 
+      -name: Install Dependencies
         run: |
-          conda create --name myenv python=3.9 --yes
-          conda activate myenv
-          conda install --file requirements.txt --yes
+          python -m install --upgrade pip
           pip install pytest
-          
-      - name: Run tests with pytest
-        run: pytest
+          pip install - r requirements.txt 
+      -name: Run tests with pytest
+      run: pytest
