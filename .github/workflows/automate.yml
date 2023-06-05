@@ -8,19 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v2
+      - name: Install Python 3
+        uses: actions/setup-python@v1
         with:
-          channel: 'defaults'
-          python-version: '3.9'
-      - name: Create Conda my-flask-env
-        run: conda env create --file environment.yml
+          python-version: 3.9
       - name: Install dependencies
-        run: |
-          conda init bash
-          source ~/.bashrc
-          conda activate my-flask-env
-          pip install --upgrade pip
+        run:
+          python -m pip install --upgrade pip
           pip install pytest
           pip install -r requirements.txt
       - name: Run tests with pytest
