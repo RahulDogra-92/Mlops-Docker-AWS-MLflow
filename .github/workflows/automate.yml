@@ -17,6 +17,8 @@ jobs:
         run: conda env create --file environment.yml
       - name: Install dependencies
         run: |
+          conda init bash
+          source ~/.bashrc
           conda activate my-flask-env
           pip install --upgrade pip
           pip install pytest
