@@ -22,3 +22,6 @@ def test_predict(client):
     assert resp.status_code == 200
     assert resp.json == {'loan_approval_status': "Approved"}
 
+    # So your testing part is done and if testing part is done what did we actually completed in CI/CD section?
+    # ANS- The CI part, we have integrated the code, so this is integration and what if I change my code then other things would break?  
+
