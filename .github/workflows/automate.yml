@@ -1,17 +1,17 @@
 # define an event which can happen(like someone push/fork the repo)
+
 name: Run Python Test  # name of the workflow
 on:                    # this on is going to tell us when and where this workflow will get activated
     push:
       branches:
           -main
-
 jobs:
   build:
     runs-on: ubuntu-latest # specify type of machine to run the job
     steps:
       - uses: action/checkout@v2  
       - name: Install Python 3   # #specify that you need to setup this python
-        uses: action/setup-python@v1
+        uses: actions/setup-python@v1
         with: 
           python-version: 3.9 
       -name: Install Dependencies
