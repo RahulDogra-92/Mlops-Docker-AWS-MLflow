@@ -17,3 +17,14 @@
 +defaults/osx-64::xz-5.4.2-h6c40b1e_0
 +defaults/osx-64::zlib-1.2.13-h4dc903c_0
 # update specs: ['python==3.8']
+==> 2023-06-05 15:58:40 <==
+# cmd: /Users/rahul/opt/anaconda3/bin/conda install numpy
+# conda version: 4.13.0
++defaults/osx-64::blas-1.0-openblas
++defaults/osx-64::libgfortran-5.0.0-11_3_0_hecd8cb5_28
++defaults/osx-64::libgfortran5-11.3.0-h9dfd629_28
++defaults/osx-64::libopenblas-0.3.21-h54e7dc3_0
++defaults/osx-64::llvm-openmp-14.0.6-h0dcd299_0
++defaults/osx-64::numpy-1.24.3-py38h57a7bef_0
++defaults/osx-64::numpy-base-1.24.3-py38hc93c6d9_0
+# update specs: ['numpy']
